@@ -3,8 +3,8 @@ describe('short task', function () {
     var answers = window.shortTask;
 
     //reverseNumber()
-    it('should return a revers number', function () {
-        expect(answers.reverseNumber(1234)).toBe(4321);
+    iit('should return a revers number', function () {
+        expect(answers.reverseNumber(1234)).toEqual(4321);
     });
     it('should return a revers number from "number string"', function () {
         expect(answers.reverseNumber('1234')).toBe(4321);
@@ -62,11 +62,11 @@ describe('short task', function () {
         expect(answers.vovelCount('EAioioi23123123uyI')).toBe(10);
     });
     //theLongestWord
-    iit('should return the longest word at the string', function () {
+    it('should return the longest word at the string', function () {
         expect(answers.findTheLongestWord('This is the end of the world')).toBe(['world']);
     });
 
-    iit('should return the longest word at the string', function () {
+    it('should return the longest word at the string', function () {
         expect(answers.findTheLongestWord('This,i...i the@world of the world world')).toBe(['world', 'world', 'world']);
     });
 
