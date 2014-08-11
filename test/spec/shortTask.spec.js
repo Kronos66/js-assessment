@@ -3,7 +3,7 @@ describe('short task', function () {
     var answers = window.shortTask;
 
     //reverseNumber()
-    iit('should return a revers number', function () {
+    it('should return a revers number', function () {
         expect(answers.reverseNumber(1234)).toEqual(4321);
     });
     it('should return a revers number from "number string"', function () {
@@ -13,7 +13,7 @@ describe('short task', function () {
         expect(answers.reverseNumber(1234)).not.toBe('4321');
     });
     it('should not accept not number argument', function () {
-        expect(answers.reverseNumber('abcs')).toBe(false);
+        expect(answers.reverseNumber('abcs')).toBeFalsy();
     });
     //returnOnlyLetter()
     it('should return only letter', function () {
@@ -50,7 +50,7 @@ describe('short task', function () {
         expect(answers.upperCase('That is hard to understand')).toBe('That Is Hard To Understand');
     });
 
-    it('should not change upper case letter',function(){
+    it('should not change upper case letter', function () {
         expect(answers.upperCase('ThatIs Hard')).toBe('ThatIs Hard');
     });
 
@@ -62,12 +62,12 @@ describe('short task', function () {
         expect(answers.vovelCount('EAioioi23123123uyI')).toBe(10);
     });
     //theLongestWord
-    it('should return the longest word at the string', function () {
-        expect(answers.findTheLongestWord('This is the end of the world')).toBe(['world']);
+    it('should return the longest word in the string', function () {
+        expect(answers.findTheLongestWord('This is the end of the world')).toEqual(['world']);
     });
 
-    it('should return the longest word at the string', function () {
-        expect(answers.findTheLongestWord('This,i...i the@world of the world world')).toBe(['world', 'world', 'world']);
+    it('should return an array of the longest word in the string', function () {
+        expect(answers.findTheLongestWord('This,i...i the@world of the world world')).toEqual(['world', 'world', 'world']);
     });
 
 });
